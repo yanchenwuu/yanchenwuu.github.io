@@ -7,7 +7,7 @@
 
   <style>
     body {
-      max-width: 980px;
+      max-width: 1050px;
       margin: 42px auto;
       padding: 0 26px;
       font-family: Arial, Helvetica, sans-serif;
@@ -43,6 +43,26 @@
       text-decoration: underline;
     }
 
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+
+    .profile-photo {
+      width: 175px;
+      height: 215px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      background: #f3f3f3;
+    }
+
+    .profile-text {
+      flex: 1;
+    }
+
     .subtitle {
       color: #444;
       font-size: 1.08em;
@@ -72,10 +92,6 @@
       font-size: 0.96em;
     }
 
-    .pub {
-      margin-bottom: 1.15em;
-    }
-
     .pub strong {
       color: #111;
     }
@@ -98,6 +114,14 @@
       padding-left: 1.35em;
     }
 
+    ol {
+      padding-left: 1.45em;
+    }
+
+    ol li {
+      margin-bottom: 1.15em;
+    }
+
     .highlight {
       background: #f7f7f7;
       border-left: 4px solid #ccc;
@@ -112,45 +136,88 @@
       color: #666;
       font-size: 0.9em;
     }
+
+    @media (max-width: 700px) {
+      .top-section {
+        flex-direction: column;
+      }
+
+      .profile-photo {
+        width: 160px;
+        height: 200px;
+      }
+
+      .nav a {
+        display: inline-block;
+        margin-bottom: 8px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <h1>Yanchen Wu</h1>
+  <div class="top-section">
 
-  <p class="subtitle">
-    Postdoc | Interfacial Phenomena | Confined Nucleation | Phase-field Modeling | Intelligent Manufacturing
-  </p>
+    <!--
+      Profile photo:
+      Upload your personal photo to:
+      assets/profile.jpg
 
-  <p class="affiliation">
-    School of Chemical Engineering, MIT, Cambridge.
-  </p>
+      Recommended size: approximately 600 × 750 px.
+      If you do not want to show a photo, delete the <img> line below.
+    -->
+    <img src="assets/profile.jpg" alt="Yanchen Wu" class="profile-photo">
+
+    <div class="profile-text">
+      <h1>Yanchen Wu</h1>
+
+      <p class="subtitle">
+        Postdoc | Interfacial Phenomena | Confined Nucleation | Phase-field Modeling | Intelligent Manufacturing
+      </p>
+
+      <p class="affiliation">
+        Department of Chemical Engineering, MIT, Cambridge.
+      </p>
+
+      <p>
+        <strong>Email:</strong> yanchenw@mit.edu<br>
+        <strong>Address:</strong> Room E17-539, 77 Massachusetts Avenue, Cambridge, Massachusetts 02139<br>
+        <strong>GitHub:</strong> <a href="https://github.com/yanchenwuu">https://github.com/yanchenwuu</a><br>
+        <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=Np7E8zsAAAAJ&hl=zh-CN">Google Scholar Profile</a><br>
+        <strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-0636-5089">0000-0003-0636-5089</a>
+      </p>
+    </div>
+
+  </div>
 
   <div class="nav">
     <a href="#about">About</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#conferences">Conferences</a>
+    <a href="#honors">Honors</a>
     <a href="#service">Service</a>
+    <a href="#skills">Skills</a>
+    <a href="#code">Code</a>
     <a href="#contact">Contact</a>
   </div>
 
   <h2 id="about">About</h2>
- <p>
-    I am a researcher working on numerical modeling of interfacial phenomena. Since Oct. 2023, 
-   I worked as a postdoctoral researcher at MIT in the
-  Department of Chemical Engineering, focusing on modeling lipid nanoparticle formation in a
-    project supported by the U.S. Food and Drug Administration. Prior to that, I conducted doctoral
-    and postdoctoral research at KIT on phase-field modeling, droplet wetting, evaporation,
-    and interfacial phenomena.
-  </p>
-  
+
   <p>
-     I received my doctoral degree in Mechanical Engineering from the Karlsruhe Institute of Technology (KIT) in 2021, where my dissertation was awarded
-    the highest academic honor of <em>Summa Cum Laude</em>.
+    I am a researcher working on numerical modeling of interfacial phenomena. Since Oct. 2023,
+    I have worked as a postdoctoral researcher at MIT in the Department of Chemical Engineering,
+    focusing on modeling lipid nanoparticle formation in a project supported by the U.S. Food and
+    Drug Administration. Prior to that, I conducted doctoral and postdoctoral research at KIT on
+    phase-field modeling, droplet wetting, evaporation, and interfacial phenomena.
   </p>
 
+  <p>
+    I received my doctoral degree in Mechanical Engineering from the Karlsruhe Institute of Technology
+    in 2021, where my dissertation was awarded the highest academic honor of
+    <em>Summa Cum Laude</em>.
+  </p>
 
   <div class="highlight">
     My research focuses on the physics and modeling of liquid interfaces, including droplet wetting,
@@ -168,62 +235,143 @@
     <li>Microfluidics, surface science, 3D printing, and intelligent manufacturing</li>
     <li>Multiscale modeling: phase-field modeling, population balance modeling, molecular dynamics, and CFD</li>
   </ul>
- 
 
-  <div class="pub">
-    <strong>Unveiling the complex morphologies of sessile droplets on heterogeneous surfaces.</strong><br>
-    Y. Wu, H. M. Zhang, F. Wang, and B. Nestler.<br>
-    <em>Communications Physics</em>, 2025, 8, 38.
-  </div>
+  <h2 id="publications">Publications</h2>
 
-  <div class="pub">
-    <strong>Line tension reshapes nucleation at surface edges: a generalized theory for nanopore activation.</strong><br>
-    Y. Wu, M. Bazant, A. Myerson, and R. Braatz.<br>
-    <em>arXiv preprint</em>, arXiv:2506.16978, 2025.
-  </div>
+  <p class="section-note">
+    Full publication list.
+  </p>
 
-  <div class="pub">
-    <strong>Mechanistic modeling of lipid nanoparticle formation for the delivery of nucleic acid therapeutics.</strong><br>
-    P. Inguva, S. Mukherjee, P. Walker, V. Tenberg, C. Devos, S. Shin, Y. Wu, S. Santra,
-    J. Wang, S. Singh, M. Kanso, S. Kim, B. Trout, M. Bazant, A. Myerson, and R. Braatz.<br>
-    <em>Biotechnology Advances</em>, 2025, 108643.
-  </div>
+  <ol>
+    <li>
+      <strong>Shorebird feeding reveals a new liquid transport mechanism.</strong><br>
+      Y. Wu.<br>
+      <em>Nature Reviews Physics</em>, 2025, 8, 69.
+      DOI: 10.1038/s42254-025-00907-4.
+    </li>
 
-  <div class="pub">
-    <strong>Digital twin of Droplet Microarray platform: evaporation behavior for multiple droplets on patterned chips for cell culture.</strong><br>
-    Y. Wu, J. E. Urrutia Gomez, H. M. Zhang, F. Wang, P. A. Levkin, B. Nestler, and A. A. Popova.<br>
-    <em>Droplet</em>, 2024, e94.
-  </div>
+    <li>
+      <strong>Unveiling the complex morphologies of sessile droplets on heterogeneous surfaces.</strong><br>
+      Y. Wu, H. M. Zhang, F. Wang, and B. Nestler.<br>
+      <em>Communications Physics</em>, 2025, 8(1), 38.
+    </li>
 
-  <div class="pub">
-    <strong>Evolution dynamics of thin liquid structures investigated by phase-field model.</strong><br>
-    Y. Wu, F. Wang, S. Zheng, and B. Nestler.<br>
-    <em>Soft Matter</em>, 2024, 20, 1523–1542.
-  </div>
+    <li>
+      <strong>Digital twin of Droplet Microarray platform: evaporation behavior for multiple droplets on patterned chips for cell culture.</strong><br>
+      Y. Wu, J. E. Urrutia Gomez, H. M. Zhang, F. Wang, P. A. Levkin, B. Nestler, and A. A. Popova.<br>
+      <em>Droplet</em>, 2024, e94.
+      DOI: 10.1002/dro2.94.
+    </li>
 
-  <div class="pub">
-    <strong>Capillary adsorption of droplets into a funnel-like structure.</strong><br>
-    Y. Wu, F. Wang, W. Huang, M. Selzer, and B. Nestler.<br>
-    <em>Physical Review Fluids</em>, 2022, 7, 054004.
-  </div>
+    <li>
+      <strong>Equilibrium droplet shapes on chemically patterned surfaces: theoretical calculation, phase-field simulation, and experiments.</strong><br>
+      Y. Wu, M. A. Kuzina, F. Wang, M. Reischl, M. Selzer, B. Nestler, and P. A. Levkin.<br>
+      <em>Journal of Colloid and Interface Science</em>, 2022, 606, 1077–1086.
+    </li>
 
-  <div class="pub">
-    <strong>Equilibrium droplet shapes on chemically patterned surfaces: theoretical calculation, phase-field simulation, and experiments.</strong><br>
-    Y. Wu, M. A. Kuzina, F. Wang, M. Reischl, M. Selzer, B. Nestler, and P. A. Levkin.<br>
-    <em>Journal of Colloid and Interface Science</em>, 2022, 606, 1077–1086.
-  </div>
+    <li>
+      <strong>Capillary adsorption of droplets into a funnel-like structure.</strong><br>
+      Y. Wu, F. Wang, W. Huang, M. Selzer, and B. Nestler.<br>
+      <em>Physical Review Fluids</em>, 2022, 7(5), 054004.
+    </li>
 
-  <div class="pub">
-    <strong>Droplets on chemically patterned surface: a local free energy minima analysis.</strong><br>
-    Y. Wu, F. Wang, M. Selzer, and B. Nestler.<br>
-    <em>Physical Review E Rapid Communications</em>, 2019, 100, 041102.
-  </div>
+    <li>
+      <strong>Droplets on chemically patterned surface: A local free energy minima analysis.</strong><br>
+      Y. Wu, F. Wang, M. Selzer, and B. Nestler.<br>
+      <em>Physical Review E Rapid Communications</em>, 2019, 100(4), 041102.
+    </li>
 
-  <div class="pub">
-    <strong>Investigation of equilibrium droplet-shapes on chemically striped patterned surfaces using phase-field method.</strong><br>
-    Y. Wu, F. Wang, M. Selzer, and B. Nestler.<br>
-    <em>Langmuir</em>, 2019, 35, 8500–8516.
-  </div>
+    <li>
+      <strong>Evolution dynamics of thin liquid structures investigated by phase-field model.</strong><br>
+      Y. Wu, F. Wang, S. Zheng, and B. Nestler.<br>
+      <em>Soft Matter</em>, 2024, 20(7), 1523–1542.
+    </li>
+
+    <li>
+      <strong>How do chemical patterns affect equilibrium droplet shapes?</strong><br>
+      Y. Wu, F. Wang, S. Ma, M. Selzer, and B. Nestler.<br>
+      <em>Soft Matter</em>, 2020, 16(26), 6115–6127.
+    </li>
+
+    <li>
+      <strong>Investigation of equilibrium droplet-shapes on chemically striped patterned surfaces using phase-field method.</strong><br>
+      Y. Wu, F. Wang, M. Selzer, and B. Nestler.<br>
+      <em>Langmuir</em>, 2019, 35(25), 8500–8516.
+    </li>
+
+    <li>
+      <strong>Wetting behavior of ink-jet printed electronic inks on patterned substrates.</strong><br>
+      P. Arya, Y. Wu, F. Wang, Z. Wang, G. Cadilha Marques, P. A. Levkin, B. Nestler, and J. Aghassi-Hagmann.<br>
+      <em>Langmuir</em>, 2024, 40(10), 5162–5173.
+    </li>
+
+    <li>
+      <strong>Effect of wall free energy formulation on the wetting phenomenon: Conservative Allen–Cahn model.</strong><br>
+      H. M. Zhang, Y. Wu, F. Wang, and B. Nestler.<br>
+      <em>The Journal of Chemical Physics</em>, 2023, 159(16).
+    </li>
+
+    <li>
+      <strong>Phase-field modeling of multiple emulsions via spinodal decomposition.</strong><br>
+      H. D. Zhang, Y. Wu, F. Wang, F. Guo, and B. Nestler.<br>
+      <em>Langmuir</em>, 2021, 37(17), 5275–5281.
+    </li>
+
+    <li>
+      <strong>Wetting effect on patterned substrates.</strong><br>
+      F. Wang, Y. Wu, and B. Nestler.<br>
+      <em>Advanced Materials</em>, 2023, 2210745.
+    </li>
+
+    <li>
+      <strong>A thermodynamically consistent diffuse interface model for the wetting phenomenon of miscible and immiscible ternary fluids.</strong><br>
+      F. Wang, H. D. Zhang, Y. Wu, and B. Nestler.<br>
+      <em>Journal of Fluid Mechanics</em>, 2023, 970, A17.
+    </li>
+
+    <li>
+      <strong>Liquid wells as self-healing, functional analogues to solid vessels.</strong><br>
+      J. M. Scheiger, M. A. Kuzina, M. Eigenbrod, Y. Wu, F. Wang, S. Heissler, S. Hardt, B. Nestler, and P. A. Levkin.<br>
+      <em>Advanced Materials</em>, 2021, 33(23), 2100117.
+    </li>
+
+    <li>
+      <strong>Spreading and rebound dynamics of sub-millimeter urea-water solution droplets impinging on substrates of varying wettability.</strong><br>
+      M. Wörner, N. Samkhaniani, X. Cai, Y. Wu, A. Majumdar, H. Marschall, B. Frohnapfel, and O. Deutschmann.<br>
+      <em>Applied Mathematical Modelling</em>, 2021, 95, 53–73.
+    </li>
+
+    <li>
+      <strong>Nanoliter scale parallel liquid–liquid extraction for high-throughput purification on a droplet microarray.</strong><br>
+      J. J. Wiedmann, Y. N. Demirdögen, S. Schmidt, M. A. Kuzina, Y. Wu, F. Wang, B. Nestler, C. Hopf, and P. A. Levkin.<br>
+      <em>Small</em>, 2023, 19(9), 2204512.
+    </li>
+
+    <li>
+      <strong>Water impalement resistance and drag reduction of superhydrophobic surface with hydrophilic strips.</strong><br>
+      Y. Cao, X. Liu, L. Zhang, Y. Wu, C. You, H. Li, H. Duan, J. Huang, and P. Lv.<br>
+      <em>ACS Applied Materials &amp; Interfaces</em>, 2024, 16(13), 16973–16982.
+    </li>
+
+    <li>
+      <strong>Mechanistic modeling of lipid nanoparticle formation for the delivery of nucleic acid therapeutics.</strong><br>
+      P. Inguva, S. Mukherjee, P. Walker, V. Tenberg, C. Devos, S. Shin, Y. Wu, S. Santra, J. Wang,
+      S. Singh, M. Kanso, S. Kim, B. Trout, M. Bazant, A. Myerson, and R. Braatz.<br>
+      <em>Biotechnology Advances</em>, 2025, 108643.
+    </li>
+
+    <li>
+      <strong>Pore-scale modeling of wettability alteration induced by low-salinity water in carbonates.</strong><br>
+      R. Li, K. K. Mohanty, Q. Kang, Y. Chen, Y. Wu, and Z. Zhao.<br>
+      <em>Langmuir</em>, 2024, 40(10), 5162–5173.
+    </li>
+
+    <li>
+      <strong>Line tension reshapes nucleation at surface edges: a generalized theory for nanopore activation.</strong><br>
+      Y. Wu, M. Bazant, A. Myerson, and R. Braatz.<br>
+      <em>arXiv preprint</em>, arXiv:2506.16978, 2025.
+    </li>
+  </ol>
 
   <h2 id="conferences">Selected Conferences</h2>
 
@@ -244,9 +392,9 @@
       <strong>How chemical patterns affect equilibrium droplet shapes.</strong>
       Y. Wu, F. Wang, S. Ma, M. Selzer, and B. Nestler. Droplets Meeting, Darmstadt, Germany, 2021.
     </li>
-     <li>
-    <strong>Investigation of equilibrium droplet-shapes on chemically patterned surfaces.</strong>
-    Y. Wu, F. Wang, M.Selzer, and B.Nestler. Durham, UK. Droplets Meeting, 2019.
+    <li>
+      <strong>Investigation of equilibrium droplet-shapes on chemically patterned surfaces.</strong>
+      Y. Wu, F. Wang, M. Selzer, and B. Nestler. Droplets Meeting, Durham, UK, 2019.
     </li>
   </ul>
 
@@ -287,8 +435,8 @@
     <strong>Address:</strong> Room E17-539, 77 Massachusetts Avenue, Cambridge, Massachusetts 02139<br>
     <strong>Email:</strong> yanchenw@mit.edu<br>
     <strong>GitHub:</strong> <a href="https://github.com/yanchenwuu">https://github.com/yanchenwuu</a><br>
-    <strong>Google Scholar:</strong> https://scholar.google.com/citations?user=Np7E8zsAAAAJ&hl=zh-CN<br>
-    <strong>ORCID:</strong> ORCID iD 0000-0003-0636-5089
+    <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=Np7E8zsAAAAJ&hl=zh-CN">Google Scholar Profile</a><br>
+    <strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-0636-5089">0000-0003-0636-5089</a>
   </p>
 
   <footer>
